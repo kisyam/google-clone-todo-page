@@ -32,7 +32,6 @@ body {
 }
 .main__screen {
     height: 80%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -40,16 +39,14 @@ body {
     justify-content: center;
 }
 #todo-form {
-    display: flex;
-    justify-content: center;
     width: 40%;
+    display: flex;
 }
 #login-form {
     display: flex;
     justify-content: center;
 }
 #login-input {
-    width: 100%;
     padding: 0 1em;
     border: 1px solid gainsboro;
     height: 38px;

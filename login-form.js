@@ -3,11 +3,11 @@ const loginInput = document.getElementById("login-input");
 const loginButton = document.getElementById("login-button");
 
 let onShowLoginInput = false;
-loginInput.style.display = "none";
+loginForm.style.display = "none";
 
 function handleLoginInput() {
-    console.log(1);
-    loginInput.style.display = onShowLoginInput ? "none" : "block";
+    loginForm.style.display = onShowLoginInput ? "none" : "block";
+    loginButton.value = onShowLoginInput ? "Log in" : "Cancel";
     onShowLoginInput = !onShowLoginInput;
 }
 
