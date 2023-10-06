@@ -39,11 +39,38 @@ body {
     align-items: center;
     justify-content: center;
 }
-.main__screen-search {
+#todo-form {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+#login-form {
+    display: flex;
+    justify-content: center;
+}
+#login-input {
+    width: 100%;
     padding: 0 1em;
     border: 1px solid gainsboro;
     height: 38px;
-    width: 40%;
+    border-radius: 30px;
+}
+
+#login-input:hover {
+    outline: none;
+    border-color: gainsboro;
+    box-shadow: 0 0 10px gainsboro;
+}
+#login-input:focus {
+    outline: none;
+    border-color: gainsboro;
+    box-shadow: 0 0 10px gainsboro;
+}
+.main__screen-search {
+    width: 100%;
+    padding: 0 1em;
+    border: 1px solid gainsboro;
+    height: 38px;
     border-radius: 30px;
 }
 .main__screen-search:hover {

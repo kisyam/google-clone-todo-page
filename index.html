@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Clone Todo Page</title>
         <link
             rel="icon"
             type="image/x-icon"
             href="https://www.google.com/favicon.ico"
         />
         <link rel="stylesheet" href="./style.css" />
-        <title>Google Clone Todo Page</title>
+        <script defer src="./login-form.js"></script>
     </head>
     <body>
         <header class="header__navbar">
@@ -25,17 +26,32 @@
         </header>
         <main class="main__screen">
             <img src="./Google.png" alt="" class="main__image" width="275px" />
-            <input type="text" class="main__screen-search" />
+            <div id="todo-form">
+                <input
+                    type="text"
+                    class="main__screen-search"
+                    placeholder="To do...."
+                />
+            </div>
+            <div id="login-form">
+                <input
+                    type="text"
+                    id="login-input"
+                    placeholder="what is your name?"
+                />
+            </div>
             <div class="main__screen-button">
                 <input
                     type="button"
                     class="button-search"
-                    value="Google Search"
+                    value="Add Todos"
+                    id="add-button"
                 />
                 <input
                     type="button"
                     class="button-search"
-                    value="I'm Feeling Lucky"
+                    value="Log in"
+                    id="login-button"
                 />
             </div>
             <span class="google__offered"
