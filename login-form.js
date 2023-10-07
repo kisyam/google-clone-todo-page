@@ -1,6 +1,7 @@
 const loginForm = document.getElementById("login-form");
 const loginInput = document.getElementById("login-input");
 const loginButton = document.getElementById("login-button");
+const loginConfirmButton = document.getElementById("login-confirmed-button");
 
 let onShowLoginInput = false;
 loginForm.style.display = "none";
@@ -11,4 +12,14 @@ function handleLoginInput() {
     onShowLoginInput = !onShowLoginInput;
 }
 
+function login-input() {
+    const username = loginInput.value;
+    if (username === "") {
+        alert("please write your name");
+    } else if (username.length > 10) {
+        alert("Your name is too long");
+    }
+}
+
 loginButton.addEventListener("click", handleLoginInput);
+loginConfirmButton.addEventListener("click", function () {});

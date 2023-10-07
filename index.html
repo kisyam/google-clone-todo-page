@@ -33,19 +33,22 @@
                     placeholder="To do...."
                 />
             </div>
-            <div id="login-form">
+            <form id="login-form">
                 <input
+                    required
+                    maxlength="10"
                     type="text"
                     id="login-input"
                     placeholder="what is your name?"
                 />
                 <input
-                    type="button"
+                    id="login-confirmed-button"
+                    type="submit"
                     value="Are you sure?"
                     class="button-search"
                 />
-            </div>
-            <div class="main__screen-button">
+            </form>
+            <form class="main__screen-button">
                 <input
                     type="button"
                     class="button-search"
@@ -58,9 +61,9 @@
                     value="Log in"
                     id="login-button"
                 />
-            </div>
+            </form>
             <span class="google__offered"
-                >Google offered in: <a class="search-language">한국어</a></span
+                >Google offered in: <a class="search-language">FP</a></span
             >
         </main>
     </body>
