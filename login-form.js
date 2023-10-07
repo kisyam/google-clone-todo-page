@@ -12,7 +12,7 @@ function handleLoginInput() {
     onShowLoginInput = !onShowLoginInput;
 }
 
-function login-input() {
+function onLoginConfirmButtonClick() {
     const username = loginInput.value;
     if (username === "") {
         alert("please write your name");
