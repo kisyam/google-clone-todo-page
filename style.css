@@ -22,7 +22,7 @@ body {
     margin-top: 10px;
 }
 .header__item:last-child {
-    padding: 10px 2px;
+    padding: 10px 0px;
     text-align: center;
     line-height: 20px;
     overflow: hidden;
@@ -65,7 +65,6 @@ body {
     box-shadow: 0 0 10px gainsboro;
 }
 .main__screen-search {
-    width: 100%;
     padding: 0 1em;
     border: 1px solid gainsboro;
     height: 38px;
@@ -82,10 +81,19 @@ body {
     box-shadow: 0 0 10px gainsboro;
 }
 .main__screen-button {
-    display: flex;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: 20px;
     justify-content: center;
+    align-items: center;
+}
+#todo-bar {
+    width: 100%;
+}
+#add-button {
+    width: min-content;
 }
 .button-search {
     border: none;

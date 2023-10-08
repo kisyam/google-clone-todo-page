@@ -26,13 +26,7 @@
         </header>
         <main class="main__screen">
             <img src="./Google.png" alt="" class="main__image" width="275px" />
-            <form id="todo-form">
-                <input
-                    type="text"
-                    class="main__screen-search"
-                    placeholder="To do...."
-                />
-            </form>
+            <form id="todo-form"></form>
 
             <form id="login-form" class="hidden">
                 <input
@@ -49,20 +43,27 @@
                     class="button-search"
                 />
             </form>
+
             <form class="main__screen-button">
                 <input
-                    type="button"
+                    type="text"
+                    class="main__screen-search"
+                    placeholder="To do...."
+                    id="todo-bar"
+                />
+                <input
+                    type="submit"
                     class="button-search"
                     value="Add Todos"
                     id="add-button"
                 />
-                <input
-                    type="button"
-                    class="button-search"
-                    value="Log in"
-                    id="login-button"
-                />
             </form>
+            <input
+                type="button"
+                class="button-search"
+                value="Log in"
+                id="login-button"
+            />
             <span class="google__offered"
                 >Google offered in: <a class="search-language">FP</a></span
             >
