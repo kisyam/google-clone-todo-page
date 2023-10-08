@@ -2,24 +2,33 @@ const loginForm = document.getElementById("login-form");
 const loginInput = document.getElementById("login-input");
 const loginButton = document.getElementById("login-button");
 const loginConfirmButton = document.getElementById("login-confirmed-button");
+const profileName = document.getElementById("profile-name");
 
-let onShowLoginInput = false;
-loginForm.style.display = "none";
+let onShowLoginInput = true;
 
 function handleLoginInput() {
-    loginForm.style.display = onShowLoginInput ? "none" : "block";
-    loginButton.value = onShowLoginInput ? "Log in" : "Cancel";
+    if (loginButton.value === "Log out") {
+        loginButton.value = onShowLoginInput ? "Log in" : "Cancel";
+        loginInput.value = "";
+        profileName.innerText = "Guest";
+    }
+    onShowLoginInput
+        ? loginForm.classList.remove("hidden")
+        : loginForm.classList.add("hidden");
     onShowLoginInput = !onShowLoginInput;
+    loginButton.value = onShowLoginInput ? "Log in" : "Cancel";
 }
 
-function onLoginConfirmButtonClick() {
+function onLoginSubmit(event) {
+    event.preventDefault();
     const username = loginInput.value;
-    if (username === "") {
-        alert("please write your name");
-    } else if (username.length > 10) {
-        alert("Your name is too long");
-    }
+    onShowLoginInput
+        ? loginForm.classList.remove("hidden")
+        : loginForm.classList.add("hidden");
+    onShowLoginInput = !onShowLoginInput;
+    profileName.innerText = username;
+    loginButton.value = "Log out";
 }
 
 loginButton.addEventListener("click", handleLoginInput);
-loginConfirmButton.addEventListener("click", function () {});
+loginForm.addEventListener("submit", onLoginSubmit);

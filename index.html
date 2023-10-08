@@ -22,24 +22,25 @@
                     width="20px"
                 />
             </span>
-            <span class="header__item">연수</span>
+            <span class="header__item" id="profile-name">Guest</span>
         </header>
         <main class="main__screen">
             <img src="./Google.png" alt="" class="main__image" width="275px" />
-            <div id="todo-form">
+            <form id="todo-form">
                 <input
                     type="text"
                     class="main__screen-search"
                     placeholder="To do...."
                 />
-            </div>
-            <form id="login-form">
+            </form>
+
+            <form id="login-form" class="hidden">
                 <input
                     required
-                    maxlength="10"
+                    maxlength="3"
                     type="text"
                     id="login-input"
-                    placeholder="what is your name?"
+                    placeholder="3 characters or less"
                 />
                 <input
                     id="login-confirmed-button"
