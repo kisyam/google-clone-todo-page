@@ -1,24 +1,22 @@
-const todoBar = document.getElementById("todo-bar");
-const addButton = document.getElementById("add-button");
-const todos = document.querySelector(".todos");
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = document.querySelector("#todo-form input");
+const toDoList = document.getElementById("todo-list");
 
-function paintTodo(newTodo) {}
+function paintTodo(newTodo) {
+    console.log("hi");
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    li.appendChild(span);
+    span.innerText = newTodo;
+    toDoList.appendChild(li);
+}
 
 function onAddToDos(event) {
     event.preventDefault();
-    const newTodo = todoBar.value;
+    const newTodo = toDoInput.value;
+    console.log(newTodo);
+    toDoInput.value = "";
     paintTodo(newTodo);
-    if (savedUsername === null) {
-        handleLoginInput();
-        return;
-    }
-
-    if (todo === "") {
-        alert("fill in the to do...");
-        return;
-    } else {
-        todoBar.value = "";
-    }
 }
 
-addButton.addEventListener("click", onAddToDos);
+toDoForm.addEventListener("submit", onAddToDos);

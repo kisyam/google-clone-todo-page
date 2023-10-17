@@ -10,6 +10,8 @@
             href="https://www.google.com/favicon.ico"
         />
         <link rel="stylesheet" href="./style.css" />
+        <script defer src="todo-form.js"></script>
+        <script defer src="./login-form.js"></script>
     </head>
     <body>
         <header class="header__navbar">
@@ -25,7 +27,6 @@
         </header>
         <main class="main__screen">
             <img src="./Google.png" alt="" class="main__image" width="275px" />
-            <form id="todo-form"></form>
 
             <form id="login-form" class="hidden">
                 <input
@@ -43,12 +44,15 @@
                 />
             </form>
 
-            <form class="main__screen-button">
+            <form id="todo-form" class="main__screen-button">
                 <input
                     type="text"
                     class="main__screen-search"
                     placeholder="To do...."
                     id="todo-bar"
+                    autocomplete="off"
+                    required
+                    maxlength="15"
                 />
                 <input
                     type="submit"
@@ -57,18 +61,19 @@
                     id="add-button"
                 />
             </form>
-            <input
-                type="submit"
-                class="button-search"
-                value="Log in"
-                id="login-button"
-            />
+            <ul id="todo-list"></ul>
+
+            <form>
+                <input
+                    type="submit"
+                    class="button-search"
+                    value="Log in"
+                    id="login-button"
+                />
+            </form>
             <span class="google__offered"
                 >Google offered in: <a class="search-language">FP</a></span
             >
-            <span class="todos"></span>
         </main>
-        <script src="./login-form.js"></script>
-        <script src="./todo-form.js"></script>
     </body>
 </html>

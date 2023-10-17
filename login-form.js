@@ -8,9 +8,9 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-function handleLoginInput() {
+function handleLoginInput(event) {
+    event.preventDefault();
     if (savedUsername) {
-        location.reload();
         alert("Are you sure ?");
         loginInput.value = "";
         localStorage.removeItem(USERNAME_KEY);
@@ -27,8 +27,7 @@ function handleLoginInput() {
     }
 }
 
-function onLoginSubmit() {
-    const username = loginInput.value;
+function onLoginSubmit(event) {
     loginForm.classList.add(HIDDEN_CLASSNAME);
     profileName.innerText = username;
     localStorage.setItem(USERNAME_KEY, username);
@@ -44,4 +43,4 @@ if (savedUsername === null) {
     profileName.innerText = savedUsername;
 }
 
-loginButton.addEventListener("click", handleLoginInput);
+loginForm.addEventListener("click", handleLoginInput);
