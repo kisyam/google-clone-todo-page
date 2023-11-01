@@ -17,8 +17,9 @@
         <link rel="stylesheet" href="./style.css" />
         <script defer src="todo-form.js"></script>
         <script defer src="login-form.js"></script>
+        <script defer src="dark-mode.js"></script>
     </head>
-    <body>
+    <body class="darkMode">
         <header class="header__navbar">
             <input type="checkbox" id="toggle" hidden />
             <label for="toggle" class="toggleSwitch">
@@ -36,7 +37,13 @@
         </header>
 
         <main class="main__screen">
-            <img src="./Google.png" alt="" class="main__image" width="275px" />
+            <img
+                id="logo-image"
+                src="./Google_0.png"
+                alt="logo-image"
+                class="main__image"
+                width="275px"
+            />
 
             <!--* 로그인 폼 -->
             <form id="login-form" class="hidden">

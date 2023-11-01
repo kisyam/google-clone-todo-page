@@ -22,9 +22,7 @@ function paintTodo({ text: newTodo, id: newTodoId }) {
     li.className = "toDoList";
     li.id = newTodoId;
     paintSpan(li, newTodo);
-
     paintButton(li);
-
     toDoList.appendChild(li);
 }
 

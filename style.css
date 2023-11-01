@@ -123,6 +123,11 @@ body {
     display: none;
 }
 
+.darkMode {
+    background-color: #202124;
+    color: white;
+}
+
 #todo-list {
     display: flex;
     gap: 10px;
@@ -138,8 +143,8 @@ body {
 }
 
 .toggleSwitch {
-    width: 80px;
-    height: 40px;
+    width: 75px;
+    height: 38px;
     display: block;
     position: relative;
     border-radius: 30px;
@@ -150,8 +155,8 @@ body {
 }
 
 .toggleSwitch .toggleButton {
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     top: 50%;
     left: 4px;
@@ -165,7 +170,7 @@ body {
 }
 
 #toggle:checked ~ .toggleSwitch .toggleButton {
-    left: calc(100% - 44px);
+    left: calc(100% - 40px);
     background: #fff;
 }
 
