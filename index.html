@@ -2,6 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="title" content="To do List 연습용 google clone page" />
+        <meta
+            name="description"
+            content="LocalStorage를 활용한 로그인, To-do list 기능을 구현했습니다."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Google Clone Todo Page</title>
         <link
@@ -15,6 +20,10 @@
     </head>
     <body>
         <header class="header__navbar">
+            <input type="checkbox" id="toggle" hidden />
+            <label for="toggle" class="toggleSwitch">
+                <span class="toggleButton"></span>
+            </label>
             <span class="header__item">Gmail</span>
             <span class="header__item">Images</span>
             <span class="header__item">
@@ -29,6 +38,7 @@
         <main class="main__screen">
             <img src="./Google.png" alt="" class="main__image" width="275px" />
 
+            <!--* 로그인 폼 -->
             <form id="login-form" class="hidden">
                 <input
                     required
@@ -45,6 +55,7 @@
                 />
             </form>
 
+            <!--* 투두 폼 -->
             <form id="todo-form" class="main__screen-button">
                 <input
                     type="text"
@@ -62,8 +73,10 @@
                     id="add-button"
                 />
             </form>
+
             <ul id="todo-list"></ul>
 
+            <!--* 로그인 버튼  -->
             <form>
                 <input
                     type="button"

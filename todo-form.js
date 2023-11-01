@@ -13,18 +13,32 @@ function saveToDos() {
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
-function paintTodo({ text: newTodo }) {
+function paintTodo({ text: newTodo, id: newTodoId }) {
     const li = document.createElement("li");
-    const span = document.createElement("span");
-    span.innerText = newTodo;
+    li.className = "toDoList";
+    li.id = newTodoId;
+    paintSpan(li, newTodo);
+
+    paintButton(li);
+
+    toDoList.appendChild(li);
+}
+
+function paintButton(li) {
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click", deleteToDo);
-    li.appendChild(span);
     li.appendChild(button);
-    toDoList.appendChild(li);
+}
+
+function paintSpan(li, newTodo) {
+    const span = document.createElement("span");
+    span.innerText = newTodo;
+    li.appendChild(span);
 }
 
 function handleToDoSubmit(event) {
