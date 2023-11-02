@@ -151,7 +151,7 @@ body {
 }
 
 .toDoDiv {
-    width: 80%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     /* flex-direction: column; */
@@ -180,11 +180,12 @@ body {
 
 .todoedit-form > input {
     padding: 5px 0px;
-    width: 50%;
+    width: 100%;
 }
 
 .todoedit-form button {
     width: 50px;
+    border: 1;
 }
 
 .toggleSwitch {
