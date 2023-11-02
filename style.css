@@ -122,11 +122,8 @@ body {
     color: #5c739b;
 }
 .google__offered {
+    margin-top: 20px;
     font-size: 18px;
-}
-
-.hidden {
-    display: none;
 }
 
 .dark-mode {
@@ -137,16 +134,57 @@ body {
 
 #todo-list {
     display: flex;
-    gap: 10px;
     flex-direction: column;
-    width: 200px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
     font-size: 24px;
 }
 
 .toDoList {
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.toDoDiv {
+    width: 80%;
     display: flex;
     justify-content: space-between;
+    /* flex-direction: column; */
+}
+.button-container {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    width: 45px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.todoedit-form {
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.todoedit-form > input {
+    padding: 5px 0px;
+    width: 50%;
+}
+
+.todoedit-form button {
+    width: 50px;
 }
 
 .toggleSwitch {
@@ -184,4 +222,8 @@ body {
 .toggleSwitch,
 .toggleButton {
     transition: all 0.2s ease-in;
+}
+
+.hidden {
+    display: none;
 }

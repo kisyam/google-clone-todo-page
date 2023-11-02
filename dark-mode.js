@@ -2,7 +2,6 @@ const logoImage = document.getElementById("logo-image");
 const darkModeToggle = document.getElementById("toggle");
 
 let isDarkMode = localStorage.getItem("isDarkMode");
-console.log(isDarkMode);
 
 if (isDarkMode === "true") {
     document.body.classList.add("dark-mode");
