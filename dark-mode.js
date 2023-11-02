@@ -1,20 +1,27 @@
-const toggleButton = document.getElementById("toggle");
 const logoImage = document.getElementById("logo-image");
-const darkModeBackground = document.querySelector(".darkMode");
+const darkModeToggle = document.getElementById("toggle");
 
-let isButtonClicked = false;
+let isDarkMode = localStorage.getItem("isDarkMode");
+console.log(isDarkMode);
+
+if (isDarkMode === "true") {
+    document.body.classList.add("dark-mode");
+    logoImage.src = "Google_1.png";
+    darkModeToggle.checked = true;
+} else {
+    logoImage.src = "Google_0.png";
+}
 
 function handleDarkMode() {
-    console.log(3);
-    isButtonClicked = !isButtonClicked;
-
-    if (isButtonClicked) {
-        logoImage.src = "Google_0.png";
-        darkModeBackground.classList.remove("darkMode");
-    } else {
+    if (darkModeToggle.checked) {
+        document.body.classList.add("dark-mode");
         logoImage.src = "Google_1.png";
-        darkModeBackground.classList.add("darkMode");
+        localStorage.setItem("isDarkMode", "true");
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("isDarkMode", "false");
+        logoImage.src = "Google_0.png";
     }
 }
 
-toggleButton.addEventListener("click", handleDarkMode);
+darkModeToggle.addEventListener("click", handleDarkMode);

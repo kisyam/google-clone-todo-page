@@ -11,7 +11,7 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
-    const li = event.target.parentElement;
+    const li = event.target.parentElement.parentElement;
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
@@ -27,10 +27,15 @@ function paintTodo({ text: newTodo, id: newTodoId }) {
 }
 
 function paintButton(li) {
-    const button = document.createElement("button");
-    button.innerText = "❌";
-    button.addEventListener("click", deleteToDo);
-    li.appendChild(button);
+    const buttonContainer = document.createElement("div");
+    const deleteButton = document.createElement("button");
+    const editButton = document.createElement("button");
+    deleteButton.innerText = "❌";
+    editButton.innerText = "✏️";
+    deleteButton.addEventListener("click", deleteToDo);
+    buttonContainer.appendChild(editButton); // 버튼을 div에 추가
+    buttonContainer.appendChild(deleteButton);
+    li.appendChild(buttonContainer);
 }
 
 function paintSpan(li, newTodo) {

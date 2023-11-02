@@ -12,6 +12,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s;
     gap: 10px;
 }
 .header__navbar {
@@ -24,6 +25,11 @@ body {
     padding: 10px;
     font-size: 15px;
 }
+
+.header__item:nth-child(2) {
+    background-color: white;
+}
+
 .header__item:last-child {
     padding: 10px 0px;
     text-align: center;
@@ -123,9 +129,10 @@ body {
     display: none;
 }
 
-.darkMode {
+.dark-mode {
     background-color: #202124;
     color: white;
+    transition: background-color 0.3s;
 }
 
 #todo-list {
