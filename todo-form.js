@@ -20,7 +20,8 @@ function deleteToDo(event) {
 
 function editToDo(event) {
     if (openEditForm) {
-        openEditForm.remove(); // 현재 열려 있는 폼을 닫음
+        openEditForm.remove();
+        // 현재 열려 있는 폼을 닫음
     }
     const id = event.target.id;
     const li = event.target.parentElement.parentElement.parentElement;
@@ -45,11 +46,6 @@ function editToDo(event) {
     form.appendChild(cancelButton);
     li.appendChild(form);
     openEditForm = form;
-    // toDoList.innerHTML = `<form action="GET" class="todoedit-form">
-    // <input class="todoedit-form-value" value="${data}">
-    // <button class="todoedit-form-okbtn" type="submit" value="ok">ok</button>
-    // <button class="todoedit-form-cancelbtn" type="button" value="cancel">cancel</button>
-    // </form>`;
 
     const editForm = document.querySelector(".todoedit-form");
     const editInput = document.querySelector(".todoedit-form-value");
